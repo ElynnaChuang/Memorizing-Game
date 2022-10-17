@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: flex-end;
   padding: 28px 170px 12px;
-  background-image: url(/images/title_bg.jpg);
+  background-image: url(images/title_bg.jpg);
   background-size: cover;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .back {
-  background: url('/images/pocker_back.jpg');
+  background: url('images/pocker_back.jpg');
   background-size: cover;
   background-position:center center;
 }
