@@ -1,0 +1,106 @@
+#cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  /* 卡片在容器的排版 */
+  flex: 7% 0 1;
+  /* 代表 flex-basis flex-grow flex-shrink */
+  /* flex-basis：flex item 在容器佔的比例或大小（px、em...） */
+  /* flex-grow ：若容器內還有剩餘，是否會把剩餘空間填滿*/
+  /* flex-shrink ：若容器內空間已經不夠了，是否會收縮自己的大小*/
+  height: 8vw; /* 100vw 為100% 視窗大小 */
+  border: 2px solid #aaa;
+  margin: 2px;
+
+  /* 卡片內部元素的排版 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center; /* 是負責排交叉軸用的，目前主軸是col，所以交叉軸為row，則他就會使物件橫向置中 */
+}
+
+.card p {
+  margin: 3px;
+  font-size: 10px;
+}
+
+.card p:last-child { /* 針對兩個p的第二個p單獨做設定 */
+  transform: rotate(180deg);
+}
+
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired {
+  background-color: rgb(195, 195, 195);
+}
+
+#header {
+  /* border: solid 2px tomato; */
+  display: flex;
+  margin: 28px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#header .title {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#header .title img {
+  max-width: 3em;
+
+}
+
+#header .title h2 {
+  padding-left: 0.5em;
+}
+
+.wrong {
+  animation: wrongAnimation 0.2s; /* 動畫名稱 播的秒數*/
+  animation-iteration-count: 5; /* 播幾次*/
+  /*目前總共是 0.2 * 5 = 1s  */
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid tomato;
+  }
+}
+
+.complete {
+  position: absolute;
+  top: 33vh;
+  width: 100vw;
+  text-align: center;
+  padding: 24px 0px;
+  background-color: rgba(182, 212, 237, 0.7);
+}
+
+.complete .title{
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(41, 50, 77);
+}
+
+.complete .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60px;
+  margin-top: 12px;
+  font-size: 16px;
+  color: rgb(37, 72, 114);
+}
