@@ -1,20 +1,61 @@
+#header {
+  /* border: solid 2px tomato; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 28px 170px 12px;
+  background-image: url(/images/title_bg.jpg);
+  background-size: cover;
+}
+
+#header .title {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+#header .title svg {
+  max-width: 2.5em;
+  fill: rgba(255, 255, 255, 0.794);
+}
+
+#header .title h2 {
+  margin: 0;
+  padding-left: 0.5em;
+  color: rgb(192, 192, 192);
+}
+
+#header .content{
+  margin-top: 8px;
+  text-align: right;
+}
+
+#header .content p{
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: rgb(192, 192, 192);
+}
+
 #cards {
   position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 28px 160px;
+  background-image: url(images/bg.jpg);
 }
 
 .card {
   /* 卡片在容器的排版 */
-  flex: 7% 0 1;
+  flex: 6.5% 0 1;
   /* 代表 flex-basis flex-grow flex-shrink */
   /* flex-basis：flex item 在容器佔的比例或大小（px、em...） */
   /* flex-grow ：若容器內還有剩餘，是否會把剩餘空間填滿*/
   /* flex-shrink ：若容器內空間已經不夠了，是否會收縮自己的大小*/
   height: 8vw; /* 100vw 為100% 視窗大小 */
   border: 2px solid #aaa;
-  margin: 2px;
+  margin: 12px 8px;
 
   /* 卡片內部元素的排版 */
   display: flex;
@@ -28,8 +69,8 @@
 }
 
 .card p {
-  margin: 3px;
-  font-size: 10px;
+  margin: 8px;
+  font-size: 20px;
 }
 
 .card p:last-child { /* 針對兩個p的第二個p單獨做設定 */
@@ -37,35 +78,13 @@
 }
 
 .back {
-  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background: url('/images/pocker_back.jpg');
   background-size: cover;
+  background-position:center center;
 }
 
 .paired {
-  background-color: rgb(195, 195, 195);
-}
-
-#header {
-  /* border: solid 2px tomato; */
-  display: flex;
-  margin: 28px;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-#header .title {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-#header .title img {
-  max-width: 3em;
-
-}
-
-#header .title h2 {
-  padding-left: 0.5em;
+  background-color: rgb(160, 176, 192);
 }
 
 .wrong {
@@ -76,21 +95,21 @@
 
 @keyframes wrongAnimation {
   to {
-    border: 2px solid tomato;
+    outline: 4px solid rgb(255, 200, 71);
   }
 }
 
 .complete {
   position: absolute;
-  top: 33vh;
+  top: 35vh;
   width: 100vw;
   text-align: center;
-  padding: 24px 0px;
-  background-color: rgba(182, 212, 237, 0.7);
+  padding: 48px 0px 60px;
+  background-color: rgba(212, 236, 255, 0.909);
 }
 
 .complete .title{
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
   color: rgb(41, 50, 77);
 }
@@ -99,8 +118,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60px;
+  height: 68px;
   margin-top: 12px;
-  font-size: 16px;
-  color: rgb(37, 72, 114);
+  font-size: 20px;
+  color: rgb(41, 50, 77);
 }
